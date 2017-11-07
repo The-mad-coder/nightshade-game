@@ -4,6 +4,7 @@ a=1
 black=(0,0,0)
 white=(255,255,255)
 screen=pygame.display.set_mode((700,500))
+#main event loop:
 while a==1:
 	b=pygame.mouse.get_pos()
 	c=b[0]
@@ -15,4 +16,5 @@ while a==1:
 #text=font.render(('text'),1,black)
 #screen.blit(text,[150,100])
 	screen.fill(white)
+	pygame.draw.rect(screen,black,[0,450,700,50],0)
 	pygame.display.flip()
