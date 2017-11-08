@@ -16,5 +16,8 @@ while a==1:
 #text=font.render(('text'),1,black)
 #screen.blit(text,[150,100])
 	screen.fill(white)
+	#pygame.draw.rect(screen_name,color,[x coord. of top left corner,y coord. of top left corner,leght of rect.,height of rect]):draws a rectagle on a screen
+	#screen.fill(color):fills the screen with one color
+	#pygame.display.flip():shows all made changes
 	pygame.draw.rect(screen,black,[0,450,700,50],0)
 	pygame.display.flip()
