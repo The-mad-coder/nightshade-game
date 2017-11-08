@@ -6,17 +6,8 @@ black=(0,0,0)
 white=(255,255,255)
 screen=pygame.display.set_mode((700,500))
 gameDisplay = pygame.display.set_mode((700,500))
-hero=pygame.image.load('hero1.png')
+hero=pygame.image.load('hero.png')
 _image_library = {}
-def get_image(path):
-        global _image_library
-        image = _image_library.get(path)
-        if image == None:
-                canonicalized_path = path.replace('/', os.sep).replace('\\', os.sep)
-                image = pygame.image.load(canonicalized_path)
-                _image_library[path] = image
-        return image
-print get_image('hero.png')
 #main event loop:
 while a==1:
 	b=pygame.mouse.get_pos()
@@ -32,6 +23,6 @@ while a==1:
 	#screen.fill(color):fills the screen with one color
 	#pygame.display.flip():shows all made changes
 	screen.fill(white)
-	screen.blit(hero, (20,20))
+	screen.blit(hero, (20,275))
 	pygame.draw.rect(screen,black,[0,450,700,50],0)
 	pygame.display.flip()
